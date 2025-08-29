@@ -1,13 +1,5 @@
 # Procesverslag
-Markdown is een simpele manier om HTML te schrijven.  
-Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
-
-Nb. De standaardstructuur en de spartaanse opmaak van de README.md zijn helemaal prima. Het gaat om de inhoud van je procesverslag. Besteedt de tijd voor pracht en praal aan je website.
-
-Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard open zetten. Fijn om dat steeds voor de relevante stuk(ken) te doen.
-
-
-
+[Markdown cheat cheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
 
 
 ## Jij
@@ -15,19 +7,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 <details open>
   <summary>uitwerken voor kick-off werkgroep</summary>
 
-  ### Auteur:
-  Sanne 't Hooft (vervangen door jouw naam)
+  Auteur: **Bence Barens**
 
-  #### Je startniveau:
-  hier je startniveau (kies uit zwart, rood óf blauw)
+  Je startniveau: **Zwarte piste**
 
-  #### Je focus:
-  hier je focus (kies uit responsive óf surface plane)
+  Je focus: **Responsive**
  
 </details>
-
-
-
 
 
 ## Je website
@@ -36,15 +22,15 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Je opdracht:
-  link naar de website die je gaat namaken óf de naam/omschrijving van je eigen ontwerp
+  [BYBORRE](https://byborre.com/)
 
   #### Screenshot(s) van de eerste pagina (small screen): 
-  hier de naam van de pagina  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+  Home | BYBORRE™
+  <img src="readme-images/byborre1.png" width="375px" alt="Home-pagina van BYBORRE; in grote letters de beschrijving 'Responsibly-made textiles, configured by you' met op de achtergrond verschillende textielen.">
 
   #### Screenshot(s) van de tweede pagina (small screen):
-  hier de naam van de pagina  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+  Projects | BYBORRE™
+  <img src="readme-images/byborre2.png" width="375px" alt="Projecten-pagina van BYBORRE; een collage van verschillende textielen van BYBORRE en hun toepassingen in de industrieën 'Interieur', 'Lifestyle', 'Kleding' en 'Mobiliteit'.">
  
 </details>
 
