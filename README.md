@@ -22,15 +22,18 @@
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Je opdracht:
-  [BYBORRE](https://byborre.com/)
+  [Vitra Office Chair Finder](https://findmy.vitra.com/)
 
   #### Screenshot(s) van de eerste pagina (small screen): 
-  Home | BYBORRE™
-  <img src="readme-images/byborre1.png" width="375px" alt="Home-pagina van BYBORRE; in grote letters de beschrijving 'Responsibly-made textiles, configured by you' met op de achtergrond verschillende textielen.">
+  Find my | Vitra
+  <img src="readme-images/vitra1.png" width="375px" alt="Home-pagina van Vitra Office Chair Finder; in het midden de tekst 'Welcome to the Office Chair Finder' met een start-knop eronder, er omheen verschillende Vitra-stoelen als achtergrond.">
+  <img src="readme-images/vitra2.png" width="375px" alt="Configuratie-pagina van Vitra Office Chair Finder; verschillende Vitra-stoelen in een circulaire opstelling, groter in het midden en kleiner aan de buitenkant. Aan de onderkant van het scherm kan de lengte van de gebruiker worden geselecteerd.">
 
   #### Screenshot(s) van de tweede pagina (small screen):
-  Projects | BYBORRE™
-  <img src="readme-images/byborre2.png" width="375px" alt="Projecten-pagina van BYBORRE; een collage van verschillende textielen van BYBORRE en hun toepassingen in de industrieën 'Interieur', 'Lifestyle', 'Kleding' en 'Mobiliteit'.">
+  Results | Vitra
+  <img src="readme-images/vitra3.png" width="375px" alt="Resultaten-pagina van Vitra Office Chair Finder; bovenin de pagina de titel 'beste matches' met daaronder een grid van verschillende stoelen.">
+  <img src="readme-images/vitra4.png" width="375px" alt="Detail-pagina van Vitra ID Trim L-stoel; Links groot een foto van de groene bureaustoel, rechts de naam en diverse informatie over de stoel.">
+  
  
 </details>
 
