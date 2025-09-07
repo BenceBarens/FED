@@ -53,13 +53,16 @@
 
 ## Breakdownschets (week 1)
 
-<details>
+<details open>
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
-  <img src="readme-images/bd1.png" width="375px" alt="">
-  <img src="readme-images/bd2.png" width="375px" alt="">
-  <img src="readme-images/bd3.png" width="375px" alt="">
-  <img src="readme-images/bd4.png" width="375px" alt="">
+  #### Eerste pagina
+  <img src="readme-images/bd1.png" height="400px" alt="">
+  <img src="readme-images/bd2.png" height="400px" alt="">
+
+  #### Tweede pagina
+  <img src="readme-images/bd3.png" height="400px" alt="">
+  <img src="readme-images/bd4.png" height="400px" alt="">
 
 </details>
 
