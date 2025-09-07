@@ -4,33 +4,33 @@
 
 ## Jij
 
-<details open>
+<details>
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   Auteur: **Bence Barens**
 
   Je startniveau: **Zwarte piste**
 
-  Je focus: **Responsive**
+  Je focus: **Surface**
  
 </details>
 
 
 ## Je website
 
-<details open>
+<details>
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Je opdracht:
   [Vitra Office Chair Finder](https://findmy.vitra.com/)
 
   #### Screenshot(s) van de eerste pagina (small screen): 
-  Find my | Vitra
+  Find my | Vitra<br>
   <img src="readme-images/vitra1.png" width="375px" alt="Home-pagina van Vitra Office Chair Finder; in het midden de tekst 'Welcome to the Office Chair Finder' met een start-knop eronder, er omheen verschillende Vitra-stoelen als achtergrond.">
   <img src="readme-images/vitra2.png" width="375px" alt="Configuratie-pagina van Vitra Office Chair Finder; verschillende Vitra-stoelen in een circulaire opstelling, groter in het midden en kleiner aan de buitenkant. Aan de onderkant van het scherm kan de lengte van de gebruiker worden geselecteerd.">
 
   #### Screenshot(s) van de tweede pagina (small screen):
-  Results | Vitra
+  Results | Vitra<br>
   <img src="readme-images/vitra3.png" width="375px" alt="Resultaten-pagina van Vitra Office Chair Finder; bovenin de pagina de titel 'beste matches' met daaronder een grid van verschillende stoelen.">
   <img src="readme-images/vitra4.png" width="375px" alt="Detail-pagina van Vitra ID Trim L-stoel; Links groot een foto van de groene bureaustoel, rechts de naam en diverse informatie over de stoel.">
   
@@ -56,14 +56,10 @@
 <details>
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
-  ### de hele pagina: 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
-
-  ### dynamisch deel (bijv menu): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
-
-  ### wellicht nog een dynamisch deel (bijv filter): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
+  <img src="readme-images/bd1.png" width="375px" alt="">
+  <img src="readme-images/bd2.png" width="375px" alt="">
+  <img src="readme-images/bd3.png" width="375px" alt="">
+  <img src="readme-images/bd4.png" width="375px" alt="">
 
 </details>
 
