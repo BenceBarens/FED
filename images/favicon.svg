@@ -1,12 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
-  <defs>
-    <style>
-      .dark { fill: #002452; }
-      .light { fill: #70BF41; }
-    </style>
-  </defs>
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+ "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+ width="512.000000pt" height="512.000000pt" viewBox="0 0 512.000000 512.000000"
+ preserveAspectRatio="xMidYMid meet">
 
-  <rect class="dark" x="0" y="0" width="200" height="200"/>
-  <polygon class="light" points="200 0 200 200 0 200 200 0"/>
-
+<g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
+fill="#000000" stroke="none">
+<path d="M0 2560 l0 -2560 2560 0 2560 0 0 2560 0 2560 -2560 0 -2560 0 0
+-2560z m1913 578 c138 -296 254 -538 257 -538 3 0 122 241 265 536 143 295
+265 538 270 540 6 2 195 3 421 2 l411 -3 -552 -1055 -553 -1055 -263 0 -264 0
+-448 865 c-246 476 -492 952 -547 1058 l-100 192 427 -2 426 -3 250 -537z
+m1972 -663 c176 -46 316 -184 369 -364 9 -30 16 -91 16 -136 0 -234 -151 -432
+-379 -499 -30 -9 -91 -16 -136 -16 -286 0 -515 229 -515 515 0 232 158 439
+381 499 72 19 191 20 264 1z"/>
+</g>
 </svg>

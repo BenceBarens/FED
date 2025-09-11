@@ -5,27 +5,129 @@
   box-sizing:border-box;  
 }
 
+html{
+	margin: 0;
+	padding: 0;
+	width: 100vw;
+}
 
-
-
-
+body, main{
+	width: 100%;
+	min-height: 100vh;
+	margin: 0;
+	overflow: hidden;
+}
 
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
-	/* startje */
-	--color-text:#111;
-	--color-background:#eee;
+	--color-text: #111;
+	--color-background: #f5f5f5;
 }
 
+/***********/
+/* STYLING */
+/***********/
 
+body{
+	color: var(--color-text);
+	background-color: var(--color-background);
+}
 
+main{
+	padding: 1rem;
+	position: relative;
+	overflow: hidden;
+}
 
+main section:first-child{
+	position: fixed;
+	bottom: 1rem;
+	left: 1rem;
+	right: 1rem;
+	background-color: white;
+	z-index: 5;
+	box-shadow: rgba(0, 0, 0, 0.1) 0 0 0.5rem 0;
+	border-radius: 0.2rem;
+}
 
-/****************/
-/* JOUW STYLING */
-/****************/
+/* Chairlist -------------------------------------------- */
 
-/* jouw code */
+.chairlist{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	margin: 0;
+	padding: 0;
+}
 
+.chairlist li{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	height: 6rem;
+}
+
+.chairlist.circle{
+	display: flex;
+}
+
+.chairlist.circle li{
+	position: initial !important;
+	
+}
+
+.chairlist li a{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	transition: all 200ms ease;
+	top: 0;
+	left: 0;
+	transform-origin: center;
+	transform: translate(0, 0) scale(1);
+}
+
+.chairlist li img{
+	width: 6rem;
+	margin: none;
+}
+
+.chairlist.circle li a{
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.position1 { top: 30% !important; left: 20%  !important; transform: scale(2)   !important; }
+.position2 { top: 30% !important; left: 60%  !important; transform: scale(2)   !important; }
+.position3 { top: 50% !important; left: 40%  !important; transform: scale(2)   !important; }
+
+.position4 { top: 15% !important; left: 40%  !important; transform: scale(1)   !important; }
+.position5 { top: 18% !important; left: 70%  !important; transform: scale(1)   !important; }
+.position6 { top: 30% !important; left: 90%  !important; transform: scale(1)   !important; }
+.position7 { top: 50% !important; left: 90%  !important; transform: scale(1)   !important; }
+.position8 { top: 65% !important; left: 70%  !important; transform: scale(1)   !important; }
+.position9 { top: 70% !important; left: 40%  !important; transform: scale(1)   !important; }
+.position10{ top: 65% !important; left: 10%  !important; transform: scale(1)   !important; }
+.position11{ top: 50% !important; left: -10% !important; transform: scale(1)   !important; }
+.position12{ top: 30% !important; left: -10% !important; transform: scale(1)   !important; }
+.position13{ top: 18% !important; left: 10%  !important; transform: scale(1)   !important; }
+
+.position14{ top: 5%  !important; left: 20%  !important; transform: scale(0.8) !important; }
+.position15{ top: 5%  !important; left: 60%  !important; transform: scale(0.8) !important; }
+.position16{ top: 10% !important; left: 90%  !important; transform: scale(0.8) !important; }
+.position17{ top: 73% !important; left: 90%  !important; transform: scale(0.8) !important; }
+.position18{ top: 80% !important; left: 60%  !important; transform: scale(0.8) !important; }
+.position19{ top: 80% !important; left: 20%  !important; transform: scale(0.8) !important; }
+.position20{ top: 73% !important; left: -10% !important; transform: scale(0.8) !important; }
+.position21{ top: 10% !important; left: -10% !important; transform: scale(0.8) !important; }
+
+.position22{ top: -3% !important; left: 0%   !important; transform: scale(0.6) !important; }
+.position23{ top: -3% !important; left: 75%  !important; transform: scale(0.6) !important; }
+.position24{ top: -5% !important; left: 40%  !important; transform: scale(0.6) !important; }
+
+.position25, .position26, .position27, .position28, .position29, .position30{
+             top: -10%!important; left: 40%  !important; transform: scale(0.6) !important; }
