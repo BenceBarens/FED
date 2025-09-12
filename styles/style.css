@@ -52,6 +52,58 @@ main section:first-child{
 	border-radius: 0.2rem;
 }
 
+.filters{
+	display: flex;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	overflow: scroll;
+	overscroll-behavior-x:contain;
+	scroll-snap-type:x mandatory;
+  	scroll-behavior:smooth;
+	position: relative;
+}
+
+.filters li{
+	width: calc(100vw - 2rem);
+	flex-basis:100%;
+	flex-shrink:0;
+  	scroll-snap-align: center;
+}
+
+ul::scroll-button(*) {
+  /* styling voor de buttons */
+  width:3em;
+  aspect-ratio:1;
+  margin:1em 0 0;
+  padding:0;
+
+  background-color: greenyellow;
+  border:none;
+  border-radius:50%;
+  cursor:pointer;
+  z-index: 10;
+
+  font-size:1em;
+  
+  /* om de buttons te positioneren tov de lijst */
+  position:absolute;
+}
+
+ul::scroll-button(right) {
+  content: '>' / 'Next';
+  right:clamp(1.5rem, 5vw, 2rem);
+}
+
+ul::scroll-button(left) {
+  content: '<' / 'Previous';
+  left:clamp(1.5rem, 5vw, 2rem);
+}
+  
+ul::scroll-button(*):disabled {
+  opacity:.5;
+}
+
 /* Chairlist -------------------------------------------- */
 
 .chairlist{
