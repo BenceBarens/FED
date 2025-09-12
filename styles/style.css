@@ -71,8 +71,7 @@ main section:first-child{
   	scroll-snap-align: center;
 }
 
-ul::scroll-button(*) {
-  /* styling voor de buttons */
+/* ul::scroll-button(*) {
   width:3em;
   aspect-ratio:1;
   margin:1em 0 0;
@@ -85,8 +84,7 @@ ul::scroll-button(*) {
   z-index: 10;
 
   font-size:1em;
-  
-  /* om de buttons te positioneren tov de lijst */
+
   position:absolute;
 }
 
@@ -102,7 +100,7 @@ ul::scroll-button(left) {
   
 ul::scroll-button(*):disabled {
   opacity:.5;
-}
+} */
 
 /* Chairlist -------------------------------------------- */
 
