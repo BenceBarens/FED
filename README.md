@@ -45,8 +45,9 @@
   <summary>uitwerken na test in 2<sup>e</sup> werkgroep</summary>
 
   ### Bevindingen
-  Lijst met je bevindingen die in de test naar voren kwamen:
+  Het grootste probleem met de huidige website, is dat er geen enkele semantiek in zit. Er is een eindeloze nesteling van div-elementen en geen van de inputs hebben input-tags. Ook is er geen enkele mogelijkheid om bij de navigatie te komen zonder eerst langs elke stoel te tabben, voor elke pagina. Tot slot is aan de vormgeving van de input vaak niet duidelijk wat voor input kan worden gegeven. Zo staan er sliders bij binaire keuzes en checkboxes waar maar één mogelijkheid is.
 
+  Ik zou de website kunnen verbeteren door een "skip to main" link te kunnen maken en door de HTML 'correcter' op de bouwen. Ook zou het zowel makkelijker als beter zijn om alle quiz-pagina's op dezelfde pagina te zetten. Zo is alle content alvast ingeladen, is navigatie minder ingewikkeld en kan ik animaties zonder ingewikkelde javascript laten werken. Verder ga ik alle inputs een unieke vormgeving geven voor meer affordance.
 </details>
 
 
@@ -92,10 +93,9 @@
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - Code ziet er goed uit (behalve beetje inline JS)
+  - Initiele website-screenshots moeten nog naar klein scherm
+  - Toegankelijkheidstest verder aanvullen
 
 </details>
 
