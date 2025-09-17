@@ -14,32 +14,7 @@
 
 <body>
 	<main>
-		<section><ul class="filters">
-				<li id="filter1">
-					<div>
-						<a href="">linkss</a>
-						<a href="#filter2">reachtss</a>
-					</div>
-					<h2>Sitting time</h2>
-					<button onclick="toggle();">Switch to circle</button>
-				</li>
-				<li id="filter2">
-					<div>
-						<a href="#filter1">naarlinksfds</a>
-						<a href="#filter3">rechtsrechts</a>
-					</div>
-					<h2>Sharing the chair?</h2>
-					<button onclick="toggle();">Switch to circle</button>
-				</li>
-				<li id="filter3">
-					<div>
-						<a href="#filter2">naardalinks</a>
-						<a href="">rechtsrechts</a>
-					</div>
-					<h2>Your height</h2>
-					<button onclick="toggle();">Switch to circle</button>
-				</li>
-		</ul></section>
+		<a href="#section-filters" class="skip">Skip to search filters</a>
 		<section>
 			<ul class="chairlist">
 				<li><a href="" id="chair-1" ><img src="images/chairs/1.webp"  alt="Soft Pad Chair EA 219 front"></a></li>
@@ -74,6 +49,62 @@
 				<li><a href="" id="chair-30"><img src="images/chairs/30.webp" alt="Physix Front"></a></li>
 			</ul>
 		</section>
+		<section id="section-filters"><form class="filters">
+				<fieldset id="filter1">
+					<div>
+						<a tabindex="-1" href="#filter1">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 20 24"><polyline points="16,4 8,12 16,20" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+						</a>
+						<a tabindex="-1" href="#filter2">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 20 24"><polyline points="8,4 16,12 8,20" fill="none" stroke="currentColor" stroke-width="2"></svg>
+						</a>
+					</div>
+					<legend>Sitting time</legend>
+					<label><input type="radio" name="sittingTime" value="1">2-4 hours</label>
+					<label><input type="radio" name="sittingTime" value="2">4-6 hours</label>
+					<label><input type="radio" name="sittingTime" value="3">6-8 hours</label>
+				</fieldset>
+				<fieldset id="filter2">
+					<div>
+						<a tabindex="-1" href="#filter1">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 20 24"><polyline points="16,4 8,12 16,20" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+						</a>
+						<a tabindex="-1" href="#filter3">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 20 24"><polyline points="8,4 16,12 8,20" fill="none" stroke="currentColor" stroke-width="2"></svg>
+						</a>
+					</div>
+					<legend>Sharing the chair?</legend>
+					<label><input type="radio" name="sharing" value="true">Yes</label>
+					<label><input type="radio" name="sharing" value="false">No</label>
+				</fieldset>
+				<fieldset id="filter3">
+					<div>
+						<a tabindex="-1" href="#filter2">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 20 24"><polyline points="16,4 8,12 16,20" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+						</a>
+						<a tabindex="-1" href="#filter4">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 20 24"><polyline points="8,4 16,12 8,20" fill="none" stroke="currentColor" stroke-width="2"></svg>
+						</a>
+					</div>
+					<legend>Your height</legend>
+					<label>shorter <input type="range" name="height" min="1" max="6"> taller</label>
+				</fieldset>
+				<fieldset id="filter4">
+					<div>
+						<a tabindex="-1" href="#filter3">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 20 24"><polyline points="16,4 8,12 16,20" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+						</a>
+						<a tabindex="-1" href="#filter5">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 20 24"><polyline points="8,4 16,12 8,20" fill="none" stroke="currentColor" stroke-width="2"></svg>
+						</a>
+					</div>
+					<legend>You sitting position</legend>
+					<label><input type="checkbox" name="position1">Desk oriented</label>
+					<label><input type="checkbox" name="position2">Upright position</label>
+					<label><input type="checkbox" name="position3">Dynamic sitting</label>
+					<label><input type="checkbox" name="position4">Relaxed, leaned back position</label>
+				</fieldset>
+		</form></section>
 	</main>
 	<script defer src="scripts/script.js"></script>
 </body>

@@ -1,6 +1,7 @@
 /**************/
 /* CSS REMEDY */
 /**************/
+
 *, *::after, *::before {
   box-sizing:border-box;  
 }
@@ -21,9 +22,55 @@ body, main{
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
+
 :root {
 	--color-text: #111;
 	--color-background: #f5f5f5;
+}
+
+@font-face {
+	font-family: "Futura Bold";
+	font-display: swap;
+	src: 
+		url(../fonts/VFutura-Bold.woff2) format("woff2"),
+		url(../fonts/VFutura-Bold.woff) format("woff"),
+		url(../fonts/VFutura-Bold.ttf) format("truetype");
+}
+
+@font-face {
+	font-family: "Futura Heavy";
+	font-display: swap;
+	src: 
+		url(../fonts/VFutura-Heavy.woff2) format("woff2"),
+		url(../fonts/VFutura-Heavy.woff) format("woff"),
+		url(../fonts/VFutura-Heavy.ttf) format("truetype");
+}
+
+@font-face {
+	font-family: "Futura Light";
+	font-display: swap;
+	src: 
+		url(../fonts/VFutura-Light.woff2) format("woff2"),
+		url(../fonts/VFutura-Light.woff) format("woff"),
+		url(../fonts/VFutura-Light.ttf) format("truetype");
+}
+
+@font-face {
+	font-family: "Futura Medium";
+	font-display: swap;
+	src: 
+		url(../fonts/VFutura-Medium.woff2) format("woff2"),
+		url(../fonts/VFutura-Medium.woff) format("woff"),
+		url(../fonts/VFutura-Medium.ttf) format("truetype");
+}
+
+@font-face {
+	font-family: "Futura Regular";
+	font-display: swap;
+	src: 
+		url(../fonts/VFutura-Regular.woff2) format("woff2"),
+		url(../fonts/VFutura-Regular.woff) format("woff"),
+		url(../fonts/VFutura-Regular.ttf) format("truetype");
 }
 
 /***********/
@@ -33,6 +80,8 @@ body, main{
 body{
 	color: var(--color-text);
 	background-color: var(--color-background);
+	font-family: "Futura Regular", Futura, sans-serif;
+	font-weight: normal;
 }
 
 main{
@@ -41,7 +90,30 @@ main{
 	overflow: hidden;
 }
 
-main section:first-child{
+h1, h2, h3, h4, h5, h6{
+	font-family: "Futura Medium", Futura, sans-serif;
+	font-weight: normal;
+}
+
+.skip {
+	position: absolute;
+	top: 1rem;
+	left: -999rem;
+	opacity: 0;
+	background-color: white;
+	padding: 0.5rem 1rem;
+	box-shadow: rgba(0, 0, 0, 0.1) 0 0 0.5rem 0;
+	border-radius: 0.2rem;
+	z-index: 99;
+}
+
+.skip:focus {
+  	opacity: 1;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+main section:last-child{
 	position: fixed;
 	bottom: 1rem;
 	left: 1rem;
@@ -64,43 +136,52 @@ main section:first-child{
 	position: relative;
 }
 
-.filters li{
-	width: calc(100vw - 2rem);
+.filters fieldset{
+	border: none;
+	width: 100%;
+	padding: 2rem 0;
 	flex-basis:100%;
 	flex-shrink:0;
   	scroll-snap-align: center;
 }
 
-/* ul::scroll-button(*) {
-  width:3em;
-  aspect-ratio:1;
-  margin:1em 0 0;
-  padding:0;
-
-  background-color: greenyellow;
-  border:none;
-  border-radius:50%;
-  cursor:pointer;
-  z-index: 10;
-
-  font-size:1em;
-
-  position:absolute;
+.filters fieldset>div{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	padding: 1rem;
+	position: absolute;
+	top: 0;
 }
 
-ul::scroll-button(right) {
-  content: '>' / 'Next';
-  right:clamp(1.5rem, 5vw, 2rem);
+.filters div a{
+	color: inherit;
+	text-decoration: none;
+	-webkit-tap-highlight-color: transparent;
 }
 
-ul::scroll-button(left) {
-  content: '<' / 'Previous';
-  left:clamp(1.5rem, 5vw, 2rem);
+.filters legend{
+	text-align: center;
+	font-size: 1.2rem;
+	font-family: "Futura Medium", Futura, sans-serif;
+	font-weight: normal;
+	padding: 1rem;
 }
-  
-ul::scroll-button(*):disabled {
-  opacity:.5;
-} */
+
+.filters label{
+	margin: 0.2rem;
+	padding: 0.5rem;
+	border: 0.1rem rgba(0, 0, 0, 0.1) solid;
+	border-radius: 0.2rem;
+	box-shadow: rgba(0, 0, 0, 0.1) 0.1rem 0.1rem 0.5rem 0;
+}
+
+fieldset{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
 
 /* Chairlist -------------------------------------------- */
 
@@ -133,7 +214,7 @@ ul::scroll-button(*):disabled {
 	justify-content: center;
 	align-items: center;
 	position: absolute;
-	transition: all 200ms ease;
+	transition: all 500ms ease;
 	top: 0;
 	left: 0;
 	transform-origin: center;
@@ -151,33 +232,33 @@ ul::scroll-button(*):disabled {
 	transform: translate(-50%, -50%);
 }
 
-.position1 { top: 30% !important; left: 20%  !important; transform: scale(2)   !important; }
-.position2 { top: 30% !important; left: 60%  !important; transform: scale(2)   !important; }
-.position3 { top: 50% !important; left: 40%  !important; transform: scale(2)   !important; }
+.position0 { top: 30% !important; left: 20%  !important; transform: scale(2)   !important; }
+.position1 { top: 30% !important; left: 60%  !important; transform: scale(2)   !important; }
+.position2 { top: 50% !important; left: 40%  !important; transform: scale(2)   !important; }
 
-.position4 { top: 15% !important; left: 40%  !important; transform: scale(1)   !important; }
-.position5 { top: 18% !important; left: 70%  !important; transform: scale(1)   !important; }
-.position6 { top: 30% !important; left: 90%  !important; transform: scale(1)   !important; }
-.position7 { top: 50% !important; left: 90%  !important; transform: scale(1)   !important; }
-.position8 { top: 65% !important; left: 70%  !important; transform: scale(1)   !important; }
-.position9 { top: 70% !important; left: 40%  !important; transform: scale(1)   !important; }
-.position10{ top: 65% !important; left: 10%  !important; transform: scale(1)   !important; }
-.position11{ top: 50% !important; left: -10% !important; transform: scale(1)   !important; }
-.position12{ top: 30% !important; left: -10% !important; transform: scale(1)   !important; }
-.position13{ top: 18% !important; left: 10%  !important; transform: scale(1)   !important; }
+.position3 { top: 15% !important; left: 40%  !important; transform: scale(1)   !important; }
+.position4 { top: 18% !important; left: 70%  !important; transform: scale(1)   !important; }
+.position5 { top: 30% !important; left: 90%  !important; transform: scale(1)   !important; }
+.position6 { top: 50% !important; left: 90%  !important; transform: scale(1)   !important; }
+.position7 { top: 65% !important; left: 70%  !important; transform: scale(1)   !important; }
+.position8 { top: 70% !important; left: 40%  !important; transform: scale(1)   !important; }
+.position9 { top: 65% !important; left: 10%  !important; transform: scale(1)   !important; }
+.position10 { top: 50% !important; left: -10% !important; transform: scale(1)   !important; }
+.position11 { top: 30% !important; left: -10% !important; transform: scale(1)   !important; }
+.position12 { top: 18% !important; left: 10%  !important; transform: scale(1)   !important; }
 
-.position14{ top: 5%  !important; left: 20%  !important; transform: scale(0.8) !important; }
-.position15{ top: 5%  !important; left: 60%  !important; transform: scale(0.8) !important; }
-.position16{ top: 10% !important; left: 90%  !important; transform: scale(0.8) !important; }
-.position17{ top: 73% !important; left: 90%  !important; transform: scale(0.8) !important; }
-.position18{ top: 80% !important; left: 60%  !important; transform: scale(0.8) !important; }
-.position19{ top: 80% !important; left: 20%  !important; transform: scale(0.8) !important; }
-.position20{ top: 73% !important; left: -10% !important; transform: scale(0.8) !important; }
-.position21{ top: 10% !important; left: -10% !important; transform: scale(0.8) !important; }
+.position13 { top: 5%  !important; left: 20%  !important; transform: scale(0.8) !important; }
+.position14 { top: 5%  !important; left: 60%  !important; transform: scale(0.8) !important; }
+.position15 { top: 10% !important; left: 90%  !important; transform: scale(0.8) !important; }
+.position16 { top: 73% !important; left: 90%  !important; transform: scale(0.8) !important; }
+.position17 { top: 80% !important; left: 60%  !important; transform: scale(0.8) !important; }
+.position18 { top: 80% !important; left: 20%  !important; transform: scale(0.8) !important; }
+.position19 { top: 73% !important; left: -10% !important; transform: scale(0.8) !important; }
+.position20 { top: 10% !important; left: -10% !important; transform: scale(0.8) !important; }
 
-.position22{ top: -3% !important; left: 0%   !important; transform: scale(0.6) !important; }
-.position23{ top: -3% !important; left: 75%  !important; transform: scale(0.6) !important; }
-.position24{ top: -5% !important; left: 40%  !important; transform: scale(0.6) !important; }
+.position21 { top: -3% !important; left: 0%   !important; transform: scale(0.6) !important; }
+.position22 { top: -3% !important; left: 75%  !important; transform: scale(0.6) !important; }
+.position23 { top: -5% !important; left: 40%  !important; transform: scale(0.6) !important; }
 
-.position25, .position26, .position27, .position28, .position29, .position30{
+.position24, .position25, .position26, .position27, .position28, .position29 {
              top: -10%!important; left: 40%  !important; transform: scale(0.6) !important; }
