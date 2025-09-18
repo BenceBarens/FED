@@ -12,7 +12,7 @@
 	<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 </head>
 
-<body>
+<body class="quiz">
 	<main>
 		<a href="#section-filters" class="skip">Skip to search filters</a>
 		<section>
@@ -59,10 +59,10 @@
 							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 20 24"><polyline points="8,4 16,12 8,20" fill="none" stroke="currentColor" stroke-width="2"></svg>
 						</a>
 					</div>
-					<legend>Sitting time</legend>
-					<label><input type="radio" name="sittingTime" value="1">2-4 hours</label>
-					<label><input type="radio" name="sittingTime" value="2">4-6 hours</label>
-					<label><input type="radio" name="sittingTime" value="3">6-8 hours</label>
+					<legend>What is your average sitting time? <small>(1/7)</small></legend>
+					<label><input type="radio" name="sittingTime" value="1"> 2-4 hours</label>
+					<label><input type="radio" name="sittingTime" value="2"> 4-6 hours</label>
+					<label><input type="radio" name="sittingTime" value="3"> 6-8 hours</label>
 				</fieldset>
 				<fieldset id="filter2">
 					<div>
@@ -73,9 +73,9 @@
 							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 20 24"><polyline points="8,4 16,12 8,20" fill="none" stroke="currentColor" stroke-width="2"></svg>
 						</a>
 					</div>
-					<legend>Sharing the chair?</legend>
-					<label><input type="radio" name="sharing" value="true">Yes</label>
-					<label><input type="radio" name="sharing" value="false">No</label>
+					<legend>Will you be sharing the chair? <small>(2/7)</small></legend>
+					<label><input type="radio" name="sharing" value="true"> Yes</label>
+					<label><input type="radio" name="sharing" value="false"> No</label>
 				</fieldset>
 				<fieldset id="filter3">
 					<div>
@@ -86,7 +86,7 @@
 							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 20 24"><polyline points="8,4 16,12 8,20" fill="none" stroke="currentColor" stroke-width="2"></svg>
 						</a>
 					</div>
-					<legend>Your height</legend>
+					<legend>How tall are you? <small>(3/7)</small></legend>
 					<label>shorter <input type="range" name="height" min="1" max="6"> taller</label>
 				</fieldset>
 				<fieldset id="filter4">
@@ -98,15 +98,55 @@
 							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 20 24"><polyline points="8,4 16,12 8,20" fill="none" stroke="currentColor" stroke-width="2"></svg>
 						</a>
 					</div>
-					<legend>You sitting position</legend>
-					<label><input type="checkbox" name="position1">Desk oriented</label>
-					<label><input type="checkbox" name="position2">Upright position</label>
-					<label><input type="checkbox" name="position3">Dynamic sitting</label>
-					<label><input type="checkbox" name="position4">Relaxed, leaned back position</label>
+					<legend>What are your sitting positions? <small>(4/7)</small></legend>
+					<label><input type="checkbox" name="position1"> Desk oriented</label>
+					<label><input type="checkbox" name="position2"> Upright position</label>
+					<label><input type="checkbox" name="position3"> Dynamic sitting</label>
+					<label><input type="checkbox" name="position4"> Relaxed, leaned back position</label>
+				</fieldset>
+				<fieldset id="filter5">
+					<div>
+						<a tabindex="-1" href="#filter4">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 20 24"><polyline points="16,4 8,12 16,20" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+						</a>
+						<a tabindex="-1" href="#filter6">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 20 24"><polyline points="8,4 16,12 8,20" fill="none" stroke="currentColor" stroke-width="2"></svg>
+						</a>
+					</div>
+					<legend>What level of breathability do you prefer? <small>(5/7)</small></legend>
+					<label><input type="radio" name="breathability" value="1"> No extra breathablity</label>
+					<label><input type="radio" name="breathability" value="2"> Moderate breathablity</label>
+					<label><input type="radio" name="breathability" value="3"> Maximum breathablity</label>
+				</fieldset>
+				<fieldset id="filter6">
+					<div>
+						<a tabindex="-1" href="#filter5">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 20 24"><polyline points="16,4 8,12 16,20" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+						</a>
+						<a tabindex="-1" href="#filter7">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 20 24"><polyline points="8,4 16,12 8,20" fill="none" stroke="currentColor" stroke-width="2"></svg>
+						</a>
+					</div>
+					<legend>How much padding would you like? <small>(6/7)</small></legend>
+					<label>less <input type="range" name="padding" min="1" max="4"> more</label>
+				</fieldset>
+				<fieldset id="filter7">
+					<div>
+						<a tabindex="-1" href="#filter6">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 20 24"><polyline points="16,4 8,12 16,20" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+						</a>
+						<a tabindex="-1" href="/results/">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 20 24"><polyline points="8,4 16,12 8,20" fill="none" stroke="currentColor" stroke-width="2"></svg>
+						</a>
+					</div>
+					<legend>What are your armrest prefrences? <small>(7/7)</small></legend>
+					<label><input type="radio" name="sittingTime" value="1"> Fixed</label>
+					<label><input type="radio" name="sittingTime" value="2"> Adustable</label>
+					<label><input type="radio" name="sittingTime" value="3"> No armrests</label>
 				</fieldset>
 		</form></section>
 	</main>
-	<script defer src="scripts/script.js"></script>
+	<script defer src="scripts/quiz.js"></script>
 </body>
 	
 </html>

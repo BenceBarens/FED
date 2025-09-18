@@ -149,8 +149,16 @@ function setChairScore() {
     //Armrests (1, 2 OR 3)
     if (userPrefrences.armrests !== null) {
         for (let i = 0; i < chairData.length; i++) {
-            if (userPrefrences.armrests == chairData[i].armrests) {
-                chairData[i].score += 1000;
+            if (userPrefrences.armrests == 1) {
+                if(chairData[i].armrests == 1){chairData[i].score += 1000;}
+                if(chairData[i].armrests == 2){chairData[i].score += 900;}
+            }
+            if (userPrefrences.armrests == 2) {
+                if(chairData[i].armrests == 1){chairData[i].score += 900;}
+                if(chairData[i].armrests == 2){chairData[i].score += 1000;}
+            }
+            if (userPrefrences.armrests == 3) {
+                if(chairData[i].armrests == 3){chairData[i].score += 1000;}
             }
         }
     }
@@ -179,6 +187,8 @@ const inputPosition1 =  document.querySelector('input[name="position1"]');
 const inputPosition2 =  document.querySelector('input[name="position2"]');
 const inputPosition3 =  document.querySelector('input[name="position3"]');
 const inputPosition4 =  document.querySelector('input[name="position4"]');
+const inputBreathability = document.querySelectorAll('input[name="breathability"]');
+const inputPadding = document.querySelector('input[name="padding"]');
 
 inputSittingTime.forEach(radio => {
     radio.addEventListener('change', event => {
@@ -198,6 +208,79 @@ inputSharing.forEach(radio => {
 
 inputHeight.addEventListener('change', event => {
     userPrefrences.height = event.target.value;
-    console.log("User preference height:", userPrefrences.sharing);
+    console.log("User preference height:", userPrefrences.height);
     moveChairsToCurrentPosition();
+});
+
+inputPosition1.addEventListener('change', () => {
+    userPrefrences.position1 = inputPosition1.checked;
+    console.log("Position 1 status:", userPrefrences.position1);
+    moveChairsToCurrentPosition();
+});
+
+inputPosition2.addEventListener('change', () => {
+    userPrefrences.position2 = inputPosition2.checked;
+    console.log("Position 2 status:", userPrefrences.position2);
+    moveChairsToCurrentPosition();
+});
+
+inputPosition3.addEventListener('change', () => {
+    userPrefrences.position3 = inputPosition3.checked;
+    console.log("Position 3 status:", userPrefrences.position3);
+    moveChairsToCurrentPosition();
+});
+
+inputPosition4.addEventListener('change', () => {
+    userPrefrences.position4 = inputPosition4.checked;
+    console.log("Position 4 status:", userPrefrences.position4);
+    moveChairsToCurrentPosition();
+});
+
+inputBreathability.forEach(radio => {
+    radio.addEventListener('change', event => {
+        userPrefrences.breathable = event.target.value;
+        console.log("User preference breathability:", userPrefrences.breathable);
+        moveChairsToCurrentPosition();
+    });
+});
+
+inputPadding.addEventListener('change', event => {
+    userPrefrences.padding = event.target.value;
+    console.log("User preference padding:", userPrefrences.padding);
+    moveChairsToCurrentPosition();
+});
+
+//Local storage ----------------------------------
+
+function saveToLocalStorage(){
+    localStorage.clear();
+    localStorage.setItem("userPrefrences", JSON.stringify(userPrefrences));
+    localStorage.setItem("chairData", JSON.stringify(chairData));
+    console.log("Data saved to localStorage");
+}
+
+function loadFromLocalStorage() {
+    const savedPrefs = localStorage.getItem("userPrefrences");
+    const savedChairs = localStorage.getItem("chairData");
+
+    if (savedPrefs) {
+        Object.assign(userPrefrences, JSON.parse(savedPrefs));
+    }
+    if (savedChairs) {
+        const parsedChairs = JSON.parse(savedChairs);
+        // bestaande chairData updaten i.p.v. nieuwe array maken
+        for (let i = 0; i < chairData.length; i++) {
+            Object.assign(chairData[i], parsedChairs[i]);
+        }
+        moveChairsToCurrentPosition();
+    }
+    console.log("Data geladen uit localStorage");
+}
+
+window.addEventListener('beforeunload', () => {
+    saveToLocalStorage();
+});
+
+window.addEventListener("load", () => {
+  loadFromLocalStorage();
 });
