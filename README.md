@@ -106,6 +106,7 @@
   - kijken of tabindex gefixt kan worden
   - een lijstje maken van welke surface plane onderwerpen ik definitief toepas
   - prio op detailpagina
+  - fieldset legend W3C erros fixen
 
   Surface plane onderwerpen worden:
   - Prefers-reduced-motion ✅

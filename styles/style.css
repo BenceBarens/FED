@@ -28,6 +28,8 @@ body, main{
 	--color-background: #f5f5f5;
 
 	--border-radius: 0.2rem;
+
+	--box-shadow: rgba(0, 0, 0, 0.1) 0 0 0.5rem 0;
 }
 
 @font-face {
@@ -144,7 +146,7 @@ a{
 	opacity: 0;
 	background-color: white;
 	padding: 0.5rem 1rem;
-	box-shadow: rgba(0, 0, 0, 0.1) 0 0 0.5rem 0;
+	box-shadow: var(--box-shadow);
 	border-radius: var(--border-radius);
 	z-index: 99;
 }
@@ -162,7 +164,7 @@ a{
 	right: 1rem;
 	background-color: white;
 	z-index: 5;
-	box-shadow: rgba(0, 0, 0, 0.1) 0 0 0.5rem 0;
+	box-shadow: var(--box-shadow);
 	border-radius: var(--border-radius);
 }
 
@@ -214,7 +216,7 @@ a{
 	padding: 0.5rem;
 	border: 0.1rem rgba(0, 0, 0, 0.1) solid;
 	border-radius: var(--border-radius);
-	box-shadow: rgba(0, 0, 0, 0.1) 0.1rem 0.1rem 0.5rem 0;
+	box-shadow: var(--box-shadow);
 }
 
 fieldset{
@@ -275,7 +277,7 @@ small{
 
 .chairlist li img{
 	width: 6rem;
-	margin: none;
+	margin: 0;
 }
 
 .chairlist.circle li a{
@@ -464,28 +466,145 @@ small{
 
 /* Details page --------------------------------------------- */
 
-.details a:first-of-type{
+.details main > a{
 	position: fixed;
 	top: 0;
 	left: 0;
 	padding: 1rem;
+	z-index: 20;
 }
 
 .details ul{
 	list-style: none;
+	padding-bottom: 20rem;
+}
+
+.details section{
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	justify-content: end;
+	align-items: center;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	pointer-events: none;
+}
+
+.details label{
+	pointer-events: all;
+	z-index: 10;
+}
+
+.details label:after{
+	content: "";
+	background-color: black;
+	opacity: 0;
+	z-index: 5;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	transition: all 500ms ease;
+}
+
+.details input{
+	display: none;
+}
+
+.details section div > div:first-of-type{
+	overflow: hidden;
+	max-height: 0;
+	transition: all 500ms ease;
+	opacity: 0;
 }
 
 .details ul li img{
 	width: 90vw;
 }
 
-.details section{
-	position: fixed;
-	bottom: 1rem;
-	left: 1rem;
-	right: 1rem;
-	padding: 1rem;
-
-	text-align: center;
+.details section > div{
+	padding: 0.5rem;
+	margin: 1rem;
 	background-color: white;
+	text-align: center;
+	pointer-events: all;
+	z-index: 10;
+	border-radius: var(--border-radius);
+}
+
+.details div > div{
+	padding: 1rem;
+}
+
+.details h1{
+	font-size: 1.2rem;
+	transition: all 200ms ease;
+}
+
+.details details{
+	text-align: left;
+	font-size: 0.9rem;
+	border-bottom: 0.1rem solid rgba(0, 0, 0, 0.1);
+}
+
+.details details strong{
+	display: block;
+}
+
+.details summary{
+	display: inline;
+	padding: 0 0.5rem;
+}
+
+.details details div{
+	max-height: 0;
+	transition: all 200ms ease;
+}
+
+.details details[open] div{
+	max-height: 20rem;
+}
+
+.details summary::after{
+	content: "▼";
+	position: absolute;
+	right: 0;
+	transform: translate(-300%, -50%);
+}
+
+.details div > div:last-of-type{
+	display: flex;
+	gap: 0.5rem;
+}
+
+.details div > div a{
+	box-shadow: var(--box-shadow);
+	padding: 0.5rem;
+	width: 100%;
+	border-radius: var(--border-radius);
+}
+
+.details div > div a:last-of-type{
+	background-color: #333333;
+	color: white;
+}
+
+.details input[type="checkbox"]:checked ~ label{
+	background-color: yellow;
+}
+
+.details input[type="checkbox"]:checked ~ label:after{
+	opacity: 0.5;
+}
+
+.details input[type="checkbox"]:checked ~ div > div:first-of-type{ 
+	max-height: 60vh;
+	opacity: 1;
+	overflow: auto;
+}
+
+.details input[type="checkbox"]:checked ~ div h1{
+	font-size: 2rem;
 }
