@@ -91,7 +91,9 @@ function orderResultsList() {
 function addMatchPercentage(){
     const maxScore = chairData[0].score;
     for (let i = 0; i < chairData.length; i++) {
-        const percentage = chairData[i].score / maxScore * 100;
+        const percentage = Math.round(chairData[i].score / maxScore * 100);
+        const holder = document.querySelector("#percentage-"+chairData[i].id);
+        holder.textContent = percentage + "% match";
     }
 }
 

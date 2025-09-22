@@ -26,6 +26,8 @@ body, main{
 :root {
 	--color-text: #111;
 	--color-background: #f5f5f5;
+
+	--border-radius: 0.2rem;
 }
 
 @font-face {
@@ -90,7 +92,6 @@ header{
 
 header img{
 	width: 4rem;
-	margin: auto;
 }
 
 header a{
@@ -98,6 +99,10 @@ header a{
 	align-items: center;
 	justify-content: center;
 	width: fit-content;
+}
+
+header a:nth-child(2){
+	margin: auto;
 }
 
 body{
@@ -140,7 +145,7 @@ a{
 	background-color: white;
 	padding: 0.5rem 1rem;
 	box-shadow: rgba(0, 0, 0, 0.1) 0 0 0.5rem 0;
-	border-radius: 0.2rem;
+	border-radius: var(--border-radius);
 	z-index: 99;
 }
 
@@ -158,7 +163,7 @@ a{
 	background-color: white;
 	z-index: 5;
 	box-shadow: rgba(0, 0, 0, 0.1) 0 0 0.5rem 0;
-	border-radius: 0.2rem;
+	border-radius: var(--border-radius);
 }
 
 .filters{
@@ -208,7 +213,7 @@ a{
 	margin: 0.2rem;
 	padding: 0.5rem;
 	border: 0.1rem rgba(0, 0, 0, 0.1) solid;
-	border-radius: 0.2rem;
+	border-radius: var(--border-radius);
 	box-shadow: rgba(0, 0, 0, 0.1) 0.1rem 0.1rem 0.5rem 0;
 }
 
@@ -311,6 +316,115 @@ small{
              top: -10%!important; left: 40%  !important; transform: scale(0.6) !important; }
 
 
+/* Start -------------------------------------------------- */
+
+.start main{
+	overflow: hidden;
+	background-color: white;
+}
+
+.start main > img{
+	width: 250vw;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform-origin: center;
+	opacity: 0;
+	transform: translate(-50%, -50%) scale(0.9);
+	animation: fade-turn 1s forwards 3s, rotate 120s linear infinite;
+	pointer-events: none;
+}
+
+.start div{
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	width: 75vw;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+}
+
+.start div img{
+	width: 6rem;
+}
+
+.start div a{
+	background-color: #333333;
+	padding: 0.5rem 4rem;
+	border-radius: var(--border-radius);
+	color: white;
+}
+
+.start div:first-of-type{
+	background-color: white;
+	z-index: 10;
+	width: 100vw;
+	height: 100vh;
+
+	opacity: 1;
+	pointer-events: none;
+	animation: disappear 1s forwards 2s;
+}
+
+.start div:last-of-type{
+	animation: fade-up 1s forwards 3s;
+	opacity: 0;
+}
+
+@keyframes disappear{
+	0%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
+	}
+}
+
+@keyframes fade-up{
+	0%{
+		opacity: 0;
+		transform: translate(-50%, -40%);
+	}
+	100%{
+		opacity: 1;
+		transform: translate(-50%, -50%);
+	}
+}
+
+@keyframes fade-turn{
+	0%{
+		opacity: 0;
+		transform: translate(-50%, -50%) scale(0.9);
+	}
+	100%{
+		opacity: 1;
+		transform: translate(-50%, -50%) scale(1);
+	}
+}
+
+.start div:first-of-type svg{
+	width: 6rem;
+
+	fill: none;
+	stroke: black;
+	stroke-width: 0.05rem;
+}
+
+@keyframes rotate{
+    from {
+      	transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+      	transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
 /* Result list--------------------------------------------- */
 
 .results ul{
@@ -325,6 +439,7 @@ small{
 	display: flex;
 	flex-direction: column-reverse;
 	text-align: center;
+	gap: 0.5rem;
 }
 
 .results article p{
@@ -345,4 +460,32 @@ small{
  .results ul li img{
 	width: 80%;
 	margin: 5rem auto;
+}
+
+/* Details page --------------------------------------------- */
+
+.details a:first-of-type{
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding: 1rem;
+}
+
+.details ul{
+	list-style: none;
+}
+
+.details ul li img{
+	width: 90vw;
+}
+
+.details section{
+	position: fixed;
+	bottom: 1rem;
+	left: 1rem;
+	right: 1rem;
+	padding: 1rem;
+
+	text-align: center;
+	background-color: white;
 }
