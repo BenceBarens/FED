@@ -4,6 +4,7 @@
 
 *, *::after, *::before {
   box-sizing:border-box;  
+  scroll-behavior:smooth;
 }
 
 html{
@@ -168,7 +169,6 @@ a{
 	overflow: scroll;
 	overscroll-behavior-x:contain;
 	scroll-snap-type:x mandatory;
-  	scroll-behavior:smooth;
 	position: relative;
 }
 
@@ -262,6 +262,12 @@ small{
 	transform: translate(0, 0) scale(1);
 }
 
+@media (prefers-reduced-motion: reduce) {
+	.chairlist li a{
+		transition: all 2s ease;
+	}
+}
+
 .chairlist li img{
 	width: 6rem;
 	margin: none;
@@ -340,34 +346,3 @@ small{
 	width: 80%;
 	margin: 5rem auto;
 }
-
-.result0 {order: -30};
-.result1 {order: -29};
-.result2 {order: -28};
-.result3 {order: -27};
-.result4 {order: -26};
-.result5 {order: -25};
-.result6 {order: -24};
-.result7 {order: -23};
-.result8 {order: -22};
-.result9 {order: -21};
-.result10 {order: -20};
-.result11 {order: -19};
-.result12 {order: -18};
-.result13 {order: -17};
-.result14 {order: -16};
-.result15 {order: -15};
-.result16 {order: -14};
-.result17 {order: -13};
-.result18 {order: -12};
-.result19 {order: -11};
-.result20 {order: -10};
-.result21 {order: -9};
-.result22 {order: -8};
-.result23 {order: -7};
-.result24 {order: -6};
-.result25 {order: -5};
-.result26 {order: -4};
-.result27 {order: -3};
-.result28 {order: -2};
-.result29 {order: -1};

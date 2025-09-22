@@ -125,10 +125,19 @@
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-- ...
+  - kijken of tabindex gefixt kan worden
+  - een lijstje maken van welke surface plane onderwerpen ik definitief toepas
+  - prio op detailpagina
+
+  Surface plane onderwerpen worden:
+  - Prefers-reduced-motion ✅
+  - Custom themes (prefers-color-scheme)❌
+  - Animaties ✅
+  - SVG (icons) stylen en animeren ❌
+  - Meer complete micro-interacties ✅
+  - Wat omvangrijkere formulieren met styling ✅
+  - DOM manipulatie ✅
+  - BlingBling ✅
 
 </details>
 

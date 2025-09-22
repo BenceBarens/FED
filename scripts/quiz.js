@@ -7,35 +7,35 @@ for (let i = 1; i <= 30; i++) {
 const chairData = [
     //Random eigenschappen voor alle 30 stoelen
     {id: 0, sittingTime: 3, sharing: false, height: 6, breathable: 2, padding: 2, armrests: 1, position1: false, position2: true, position3: false, position4: false, score: 0},
-    {id: 1, sittingTime: 2, sharing: true, height: 4, breathable: 2, padding: 3, armrests: 3, position1: true, position2: false, position3: true, position4: true, score: 0},
+    {id: 1, sittingTime: 2, sharing: true, height: 4, breathable: 2, padding: 3, armrests: 1, position1: true, position2: false, position3: true, position4: true, score: 0},
     {id: 2, sittingTime: 1, sharing: true, height: 5, breathable: 1, padding: 1, armrests: 2, position1: false, position2: true, position3: true, position4: true, score: 0},
-    {id: 3, sittingTime: 3, sharing: true, height: 2, breathable: 2, padding: 2, armrests: 3, position1: false, position2: false, position3: false, position4: true, score: 0},
-    {id: 4, sittingTime: 1, sharing: false, height: 4, breathable: 1, padding: 4, armrests: 2, position1: false, position2: false, position3: true, position4: false, score: 0},
+    {id: 3, sittingTime: 3, sharing: true, height: 2, breathable: 2, padding: 2, armrests: 1, position1: false, position2: false, position3: false, position4: true, score: 0},
+    {id: 4, sittingTime: 1, sharing: false, height: 4, breathable: 1, padding: 4, armrests: 3, position1: false, position2: false, position3: true, position4: false, score: 0},
     {id: 5, sittingTime: 2, sharing: false, height: 3, breathable: 3, padding: 4, armrests: 1, position1: true, position2: false, position3: true, position4: true, score: 0},
     {id: 6, sittingTime: 3, sharing: true, height: 1, breathable: 2, padding: 2, armrests: 2, position1: false, position2: true, position3: false, position4: false, score: 0},
     {id: 7, sittingTime: 1, sharing: true, height: 5, breathable: 1, padding: 3, armrests: 1, position1: true, position2: true, position3: false, position4: true, score: 0},
-    {id: 8, sittingTime: 3, sharing: false, height: 6, breathable: 3, padding: 1, armrests: 3, position1: false, position2: false, position3: true, position4: false, score: 0},
+    {id: 8, sittingTime: 3, sharing: false, height: 6, breathable: 3, padding: 1, armrests: 1, position1: false, position2: false, position3: true, position4: false, score: 0},
     {id: 9, sittingTime: 2, sharing: true, height: 4, breathable: 2, padding: 4, armrests: 2, position1: true, position2: false, position3: true, position4: false, score: 0},
     {id: 10, sittingTime: 1, sharing: false, height: 6, breathable: 1, padding: 2, armrests: 2, position1: false, position2: true, position3: false, position4: true, score: 0},
     {id: 11, sittingTime: 2, sharing: true, height: 3, breathable: 3, padding: 4, armrests: 1, position1: true, position2: false, position3: false, position4: false, score: 0},
     {id: 12, sittingTime: 3, sharing: false, height: 5, breathable: 2, padding: 3, armrests: 1, position1: true, position2: true, position3: false, position4: true, score: 0},
-    {id: 13, sittingTime: 1, sharing: true, height: 2, breathable: 3, padding: 4, armrests: 3, position1: false, position2: true, position3: true, position4: false, score: 0},
+    {id: 13, sittingTime: 1, sharing: true, height: 2, breathable: 3, padding: 4, armrests: 2, position1: false, position2: true, position3: true, position4: false, score: 0},
     {id: 14, sittingTime: 2, sharing: false, height: 1, breathable: 1, padding: 3, armrests: 2, position1: true, position2: false, position3: true, position4: true, score: 0},
     {id: 15, sittingTime: 3, sharing: true, height: 6, breathable: 2, padding: 4, armrests: 1, position1: false, position2: true, position3: false, position4: true, score: 0},
     {id: 16, sittingTime: 1, sharing: false, height: 4, breathable: 1, padding: 2, armrests: 2, position1: true, position2: false, position3: false, position4: false, score: 0},
-    {id: 17, sittingTime: 2, sharing: true, height: 3, breathable: 3, padding: 1, armrests: 3, position1: false, position2: true, position3: true, position4: true, score: 0},
+    {id: 17, sittingTime: 2, sharing: true, height: 3, breathable: 3, padding: 1, armrests: 1, position1: false, position2: true, position3: true, position4: true, score: 0},
     {id: 18, sittingTime: 3, sharing: false, height: 2, breathable: 2, padding: 4, armrests: 1, position1: true, position2: false, position3: false, position4: true, score: 0},
     {id: 19, sittingTime: 1, sharing: true, height: 5, breathable: 1, padding: 3, armrests: 2, position1: false, position2: false, position3: true, position4: false, score: 0},
-    {id: 20, sittingTime: 2, sharing: false, height: 6, breathable: 3, padding: 2, armrests: 1, position1: true, position2: true, position3: false, position4: true, score: 0},
-    {id: 21, sittingTime: 3, sharing: true, height: 1, breathable: 2, padding: 4, armrests: 3, position1: false, position2: false, position3: true, position4: false, score: 0},
+    {id: 20, sittingTime: 2, sharing: false, height: 6, breathable: 3, padding: 2, armrests: 3, position1: true, position2: true, position3: false, position4: true, score: 0},
+    {id: 21, sittingTime: 3, sharing: true, height: 1, breathable: 2, padding: 4, armrests: 1, position1: false, position2: false, position3: true, position4: false, score: 0},
     {id: 22, sittingTime: 1, sharing: false, height: 4, breathable: 1, padding: 1, armrests: 2, position1: true, position2: false, position3: true, position4: true, score: 0},
-    {id: 23, sittingTime: 2, sharing: true, height: 3, breathable: 2, padding: 2, armrests: 3, position1: false, position2: true, position3: false, position4: true, score: 0},
+    {id: 23, sittingTime: 2, sharing: true, height: 3, breathable: 2, padding: 2, armrests: 1, position1: false, position2: true, position3: false, position4: true, score: 0},
     {id: 24, sittingTime: 3, sharing: false, height: 5, breathable: 3, padding: 4, armrests: 1, position1: true, position2: false, position3: true, position4: false, score: 0},
     {id: 25, sittingTime: 1, sharing: true, height: 2, breathable: 1, padding: 2, armrests: 2, position1: false, position2: true, position3: false, position4: true, score: 0},
     {id: 26, sittingTime: 2, sharing: false, height: 6, breathable: 3, padding: 3, armrests: 3, position1: true, position2: false, position3: true, position4: false, score: 0},
     {id: 27, sittingTime: 3, sharing: true, height: 1, breathable: 2, padding: 1, armrests: 2, position1: false, position2: true, position3: false, position4: false, score: 0},
     {id: 28, sittingTime: 1, sharing: false, height: 4, breathable: 3, padding: 4, armrests: 1, position1: true, position2: false, position3: true, position4: true, score: 0},
-    {id: 29, sittingTime: 2, sharing: true, height: 5, breathable: 2, padding: 2, armrests: 3, position1: false, position2: true, position3: false, position4: true, score: 0}
+    {id: 29, sittingTime: 2, sharing: true, height: 5, breathable: 2, padding: 2, armrests: 2, position1: false, position2: true, position3: false, position4: true, score: 0}
 ];
 
 //Voorkeuren variabelen aanmaken
@@ -77,7 +77,7 @@ function setChairScore() {
         for (let i = 0; i < chairData.length; i++) {
         const diff = Math.abs(chairData[i].sittingTime - userPrefrences.sittingTime);
 
-        const score = Math.max(0, 10 - (diff / maxDiff) * 10);
+        const score = Math.max(0, 15 - (diff / maxDiff) * 15);
 
         chairData[i].score += score;
         }
@@ -86,7 +86,7 @@ function setChairScore() {
     if (userPrefrences.sharing !== null) {
         for (let i = 0; i < chairData.length; i++) {
             if (chairData[i].sharing == true && userPrefrences.sharing == true) {
-                chairData[i].score += 100;
+                chairData[i].score += 21;
             } else {
                 chairData[i].score += 0;
             }
@@ -100,7 +100,7 @@ function setChairScore() {
         for (let i = 0; i < chairData.length; i++) {
         const diff = Math.abs(chairData[i].height - userPrefrences.height);
 
-        const score = Math.max(0, 10 - (diff / maxDiff) * 10);
+        const score = Math.max(0, 15 - (diff / maxDiff) * 15);
 
         chairData[i].score += score;
         }
@@ -128,7 +128,7 @@ function setChairScore() {
         for (let i = 0; i < chairData.length; i++) {
         const diff = Math.abs(chairData[i].breathable - userPrefrences.breathable);
 
-        const score = Math.max(0, 10 - (diff / maxDiff) * 10);
+        const score = Math.max(0, 15 - (diff / maxDiff) * 15);
 
         chairData[i].score += score;
         }
@@ -141,7 +141,7 @@ function setChairScore() {
         for (let i = 0; i < chairData.length; i++) {
         const diff = Math.abs(chairData[i].padding - userPrefrences.padding);
 
-        const score = Math.max(0, 10 - (diff / maxDiff) * 10);
+        const score = Math.max(0, 15 - (diff / maxDiff) * 15);
 
         chairData[i].score += score;
         }
@@ -150,15 +150,15 @@ function setChairScore() {
     if (userPrefrences.armrests !== null) {
         for (let i = 0; i < chairData.length; i++) {
             if (userPrefrences.armrests == 1) {
-                if(chairData[i].armrests == 1){chairData[i].score += 1000;}
-                if(chairData[i].armrests == 2){chairData[i].score += 900;}
+                if(chairData[i].armrests == 1){chairData[i].score += 23;}
+                if(chairData[i].armrests == 2){chairData[i].score += 22;}
             }
             if (userPrefrences.armrests == 2) {
-                if(chairData[i].armrests == 1){chairData[i].score += 900;}
-                if(chairData[i].armrests == 2){chairData[i].score += 1000;}
+                if(chairData[i].armrests == 1){chairData[i].score += 22;}
+                if(chairData[i].armrests == 2){chairData[i].score += 23;}
             }
             if (userPrefrences.armrests == 3) {
-                if(chairData[i].armrests == 3){chairData[i].score += 1000;}
+                if(chairData[i].armrests == 3){chairData[i].score += 22;}
             }
         }
     }
@@ -189,6 +189,7 @@ const inputPosition3 =  document.querySelector('input[name="position3"]');
 const inputPosition4 =  document.querySelector('input[name="position4"]');
 const inputBreathability = document.querySelectorAll('input[name="breathability"]');
 const inputPadding = document.querySelector('input[name="padding"]');
+const inputArmrests = document.querySelectorAll('input[name="armrests"]');
 
 inputSittingTime.forEach(radio => {
     radio.addEventListener('change', event => {
@@ -250,6 +251,14 @@ inputPadding.addEventListener('change', event => {
     moveChairsToCurrentPosition();
 });
 
+inputArmrests.forEach(radio => {
+    radio.addEventListener('change', event => {
+        userPrefrences.armrests = event.target.value;
+        console.log("User preference armrests:", userPrefrences.armrests);
+        moveChairsToCurrentPosition();
+    });
+});
+
 //Local storage ----------------------------------
 
 function saveToLocalStorage(){
@@ -281,6 +290,6 @@ window.addEventListener('beforeunload', () => {
     saveToLocalStorage();
 });
 
-window.addEventListener("load", () => {
-  loadFromLocalStorage();
-});
+// window.addEventListener("load", () => {
+//   loadFromLocalStorage();
+// });
