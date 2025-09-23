@@ -157,6 +157,9 @@ a{
 	transform: translateX(-50%);
 }
 
+
+/* Quiz -------------------------------------------------- */
+
 .quiz main section:last-child{
 	position: fixed;
 	bottom: 1rem;
@@ -198,10 +201,6 @@ a{
 	top: 0;
 }
 
-.filters div a{
-	-webkit-tap-highlight-color: transparent;
-}
-
 .filters legend{
 	text-align: center;
 	font-size: 1.2rem;
@@ -231,7 +230,7 @@ small{
 	margin-left: 0.5rem;
 }
 
-/* Chairlist -------------------------------------------- */
+/* Chairlist */
 
 .chairlist{
 	display: grid;
@@ -286,17 +285,17 @@ small{
 	transform: translate(-50%, -50%);
 }
 
-.position0 { top: 30% !important; left: 20%  !important; transform: scale(2)   !important; }
-.position1 { top: 30% !important; left: 60%  !important; transform: scale(2)   !important; }
-.position2 { top: 50% !important; left: 40%  !important; transform: scale(2)   !important; }
+.position0  { top: 30% !important; left: 20%  !important; transform: scale(2)   !important; }
+.position1  { top: 30% !important; left: 60%  !important; transform: scale(2)   !important; }
+.position2  { top: 50% !important; left: 40%  !important; transform: scale(2)   !important; }
 
-.position3 { top: 15% !important; left: 40%  !important; transform: scale(1)   !important; }
-.position4 { top: 18% !important; left: 70%  !important; transform: scale(1)   !important; }
-.position5 { top: 30% !important; left: 90%  !important; transform: scale(1)   !important; }
-.position6 { top: 50% !important; left: 90%  !important; transform: scale(1)   !important; }
-.position7 { top: 65% !important; left: 70%  !important; transform: scale(1)   !important; }
-.position8 { top: 70% !important; left: 40%  !important; transform: scale(1)   !important; }
-.position9 { top: 65% !important; left: 10%  !important; transform: scale(1)   !important; }
+.position3  { top: 15% !important; left: 40%  !important; transform: scale(1)   !important; }
+.position4  { top: 18% !important; left: 70%  !important; transform: scale(1)   !important; }
+.position5  { top: 30% !important; left: 90%  !important; transform: scale(1)   !important; }
+.position6  { top: 50% !important; left: 90%  !important; transform: scale(1)   !important; }
+.position7  { top: 65% !important; left: 70%  !important; transform: scale(1)   !important; }
+.position8  { top: 70% !important; left: 40%  !important; transform: scale(1)   !important; }
+.position9  { top: 65% !important; left: 10%  !important; transform: scale(1)   !important; }
 .position10 { top: 50% !important; left: -10% !important; transform: scale(1)   !important; }
 .position11 { top: 30% !important; left: -10% !important; transform: scale(1)   !important; }
 .position12 { top: 18% !important; left: 10%  !important; transform: scale(1)   !important; }
@@ -315,7 +314,7 @@ small{
 .position23 { top: -5% !important; left: 40%  !important; transform: scale(0.6) !important; }
 
 .position24, .position25, .position26, .position27, .position28, .position29 {
-             top: -10%!important; left: 40%  !important; transform: scale(0.6) !important; }
+              top: -10%!important; left: 40%  !important; transform: scale(0.6) !important; }
 
 
 /* Start -------------------------------------------------- */
@@ -466,12 +465,14 @@ small{
 
 /* Details page --------------------------------------------- */
 
-.details main > a{
+.details main > button{
 	position: fixed;
 	top: 0;
 	left: 0;
 	padding: 1rem;
 	z-index: 20;
+	border: none;
+	background: none;
 }
 
 .details ul{
@@ -591,20 +592,24 @@ small{
 	color: white;
 }
 
-.details input[type="checkbox"]:checked ~ label{
+.details input[type="checkbox"]:checked ~ label,
+.details section:focus-within > label{
 	background-color: yellow;
 }
 
-.details input[type="checkbox"]:checked ~ label:after{
+.details input[type="checkbox"]:checked ~ label:after,
+.details section:focus-within > label:after{
 	opacity: 0.5;
 }
 
-.details input[type="checkbox"]:checked ~ div > div:first-of-type{ 
+.details input[type="checkbox"]:checked ~ div > div:first-of-type,
+.details section:focus-within div > div:first-of-type{ 
 	max-height: 60vh;
 	opacity: 1;
 	overflow: auto;
 }
 
-.details input[type="checkbox"]:checked ~ div h1{
+.details input[type="checkbox"]:checked ~ div h1,
+.details section:focus-within > div h1{
 	font-size: 2rem;
 }
