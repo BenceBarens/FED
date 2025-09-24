@@ -24,12 +24,43 @@ body, main{
 /*********************/
 
 :root {
-	--color-text: #111;
-	--color-background: #f5f5f5;
+	--color-surface1: #f5f5f5;
+	--color-on-surface1: #272727;
+
+	--color-surface2: #ffffff;
+	--color-on-surface2: #272727;
+
+	--color-surface3: #333333;
+	--color-on-surface3: #ffffff;
+
+	--color-accent: #ef6b6b;
+	--color-light: rgba(0, 0, 0, 0.5);
+	--color-shadow: rgba(0, 0, 0, 0.1);
 
 	--border-radius: 0.2rem;
 
 	--box-shadow: rgba(0, 0, 0, 0.1) 0 0 0.5rem 0;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-surface1: #272727;
+		--color-on-surface1: #f5f5f5;
+
+		--color-surface2: #383838;
+		--color-on-surface2: #f5f5f5;
+
+		--color-surface3: #f5f5f5;
+		--color-on-surface3: #272727;
+
+		--color-accent: #f48686;
+		--color-light: rgba(255, 255, 255, 0.7);
+		--color-shadow: rgba(255, 255, 255, 0.1);
+	}
+
+	svg, .icon{
+		filter: invert(1);
+	}
 }
 
 @font-face {
@@ -82,34 +113,43 @@ body, main{
 /***********/
 
 header{
-	padding: 1rem 0.5rem;
+	padding: 1rem;
 	display: grid;
 	grid-template-columns: 1fr 2fr 1fr;
 	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
-	background-color: white;
+	background-color: var(--color-surface2);
 }
 
 header img{
 	width: 4rem;
 }
 
-header a{
+header button, header a{
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	width: fit-content;
+	background: none;
+	border: none;
+	gap: 0.5rem;
 }
 
 header a:nth-child(2){
 	margin: auto;
 }
 
+header a:nth-child(3){
+	text-align: right;
+	align-self: right;
+	margin-left: auto;
+}
+
 body{
-	color: var(--color-text);
-	background-color: var(--color-background);
+	color: var(--color-on-surface1);
+	background-color: var(--color-surface1);
 	font-family: "Futura Regular", Futura, sans-serif;
 	font-weight: normal;
 }
@@ -126,7 +166,7 @@ body{
 
 .results main{
 	padding: 5rem 1rem;
-	background-color: white;
+	background-color: var(--color-surface2);
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -144,7 +184,7 @@ a{
 	top: 1rem;
 	left: -999rem;
 	opacity: 0;
-	background-color: white;
+	background-color: var(--color-surface2);
 	padding: 0.5rem 1rem;
 	box-shadow: var(--box-shadow);
 	border-radius: var(--border-radius);
@@ -157,29 +197,58 @@ a{
 	transform: translateX(-50%);
 }
 
+@keyframes disappear{
+	0%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
+	}
+}
+
+@keyframes fade-slide-up{
+	0%{
+		opacity: 0;
+		transform: translateY(2rem) scale(0.95);
+	}
+	100%{
+		opacity: 1;
+		transform: translateY(0) scale(1);
+	}
+}
+
 
 /* Quiz -------------------------------------------------- */
 
 .quiz main section:last-child{
 	position: fixed;
+	width: calc(100vw - 2rem);
+	max-width: 30rem;
 	bottom: 1rem;
-	left: 1rem;
-	right: 1rem;
-	background-color: white;
+	left: 50%;
+	transform: translateX(-50%);
+
+	background-color: var(--color-surface2);
 	z-index: 5;
 	box-shadow: var(--box-shadow);
 	border-radius: var(--border-radius);
 }
+
 
 .filters{
 	display: flex;
 	margin: 0;
 	padding: 0;
 	list-style: none;
-	overflow: scroll;
-	overscroll-behavior-x:contain;
+	overflow-x: scroll;
+	scrollbar-width: none;
+	overscroll-behavior-x: contain;
 	scroll-snap-type:x mandatory;
 	position: relative;
+}
+
+.filters::-webkit-scrollbar {
+  	display: none;
 }
 
 .filters fieldset{
@@ -213,7 +282,7 @@ a{
 .filters label{
 	margin: 0.2rem;
 	padding: 0.5rem;
-	border: 0.1rem rgba(0, 0, 0, 0.1) solid;
+	border: 0.1rem var(--color-shadow) solid;
 	border-radius: var(--border-radius);
 	box-shadow: var(--box-shadow);
 }
@@ -226,7 +295,7 @@ fieldset{
 }
 
 small{
-	color:rgba(0, 0, 0, 0.5);
+	color:var(--color-light);
 	margin-left: 0.5rem;
 }
 
@@ -234,7 +303,7 @@ small{
 
 .chairlist{
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-columns: repeat(auto-fit, minmax(calc(5vw + 4rem), 1fr));
 	margin: 0;
 	padding: 0;
 }
@@ -244,7 +313,8 @@ small{
 	margin: 0;
 	padding: 0;
 	position: relative;
-	height: 6rem;
+	width: calc(5vw + 5rem);
+	height: calc(5vw + 6rem);
 }
 
 .chairlist.circle{
@@ -253,7 +323,6 @@ small{
 
 .chairlist.circle li{
 	position: initial !important;
-	
 }
 
 .chairlist li a{
@@ -275,7 +344,7 @@ small{
 }
 
 .chairlist li img{
-	width: 6rem;
+	width: calc(5vw + 5rem);
 	margin: 0;
 }
 
@@ -321,7 +390,7 @@ small{
 
 .start main{
 	overflow: hidden;
-	background-color: white;
+	background-color: var(--color-surface2);
 }
 
 .start main > img{
@@ -332,7 +401,7 @@ small{
 	transform-origin: center;
 	opacity: 0;
 	transform: translate(-50%, -50%) scale(0.9);
-	animation: fade-turn 1s forwards 3s, rotate 120s linear infinite;
+	animation: fade-turn 1s forwards 3.5s, rotate 120s linear infinite 3.5s;
 	pointer-events: none;
 }
 
@@ -356,35 +425,26 @@ small{
 }
 
 .start div a{
-	background-color: #333333;
+	background-color: var(--color-surface3);
 	padding: 0.5rem 4rem;
 	border-radius: var(--border-radius);
-	color: white;
+	color: var(--color-on-surface3);
 }
 
 .start div:first-of-type{
-	background-color: white;
+	background-color: var(--color-surface2);
 	z-index: 10;
 	width: 100vw;
 	height: 100vh;
 
 	opacity: 1;
 	pointer-events: none;
-	animation: disappear 1s forwards 2s;
+	animation: disappear 0.5s forwards 3s;
 }
 
 .start div:last-of-type{
-	animation: fade-up 1s forwards 3s;
+	animation: fade-up 2s forwards 3.5s;
 	opacity: 0;
-}
-
-@keyframes disappear{
-	0%{
-		opacity: 1;
-	}
-	100%{
-		opacity: 0;
-	}
 }
 
 @keyframes fade-up{
@@ -401,7 +461,7 @@ small{
 @keyframes fade-turn{
 	0%{
 		opacity: 0;
-		transform: translate(-50%, -50%) scale(0.9);
+		transform: translate(-50%, -50%) scale(0.8);
 	}
 	100%{
 		opacity: 1;
@@ -409,22 +469,51 @@ small{
 	}
 }
 
-.start div:first-of-type svg{
-	width: 6rem;
-
-	fill: none;
-	stroke: black;
-	stroke-width: 0.05rem;
+@keyframes rotate {
+  to {
+    transform: translate(-50%, -50%) scale(1) rotate(360deg);
+  }
 }
 
-@keyframes rotate{
-    from {
-      	transform: translate(-50%, -50%) rotate(0deg);
-    }
-    to {
-      	transform: translate(-50%, -50%) rotate(360deg);
-    }
+@media (prefers-reduced-motion: reduce) {
+	@keyframes fade-up{
+		0%{
+			opacity: 0;
+		}
+		100%{
+			opacity: 1;
+		}
+	}
+	@keyframes fade-turn{
+		0%{
+			opacity: 0;
+		}
+		100%{
+			opacity: 1;
+		}
+	}
 }
+
+.start div:first-of-type svg {
+  width: 6rem;
+}
+
+.start div:first-of-type svg path {
+  fill: none;
+  stroke: black;
+  stroke-width: 0.05rem;
+
+  stroke-dasharray: 1062.86;
+  stroke-dashoffset: 1062.86;
+  animation: draw 3s ease-in forwards 1s;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
 
 /* Result list--------------------------------------------- */
 
@@ -432,8 +521,9 @@ small{
 	list-style: none;
 	padding: 0;
 	display: flex;
-	flex-direction: column;
+	flex-wrap: wrap;
 	gap: 3rem;
+	justify-content: center;
 }
 
 .results article{
@@ -444,7 +534,7 @@ small{
 }
 
 .results article p{
-	color: #ef6b6b;
+	color: var(--color-accent);
 	margin: 0;
 }
 
@@ -454,16 +544,21 @@ small{
 }
 
 .results ul li div{
-	background-color: #f5f5f5;
+	background-color: var(--color-surface1);
 	margin-bottom: 1rem;
 }
 
  .results ul li img{
-	width: 80%;
+	max-width: 80%;
+	max-height: 30rem;
 	margin: 5rem auto;
 }
 
 /* Details page --------------------------------------------- */
+
+.details main{
+	animation: fade-slide-up 0.2s ease-out;
+}
 
 .details main > button{
 	position: fixed;
@@ -477,7 +572,12 @@ small{
 
 .details ul{
 	list-style: none;
+	padding: 0;
 	padding-bottom: 20rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 .details section{
@@ -528,7 +628,7 @@ small{
 .details section > div{
 	padding: 0.5rem;
 	margin: 1rem;
-	background-color: white;
+	background-color: var(--color-surface2);
 	text-align: center;
 	pointer-events: all;
 	z-index: 10;
@@ -547,7 +647,8 @@ small{
 .details details{
 	text-align: left;
 	font-size: 0.9rem;
-	border-bottom: 0.1rem solid rgba(0, 0, 0, 0.1);
+	border-bottom: 0.1rem solid var(--color-shadow);
+	padding-bottom: 0.8rem;
 }
 
 .details details strong{
@@ -561,18 +662,23 @@ small{
 
 .details details div{
 	max-height: 0;
-	transition: all 200ms ease;
-}
-
-.details details[open] div{
-	max-height: 20rem;
+	transition: all 500ms ease;
 }
 
 .details summary::after{
 	content: "▼";
 	position: absolute;
 	right: 0;
-	transform: translate(-300%, -50%);
+	transform: translate(-300%, -50%) rotate(0deg);
+	transition: all 300ms ease;
+}
+
+.details details[open] div{
+	max-height: 10rem;
+}
+
+.details details[open] summary::after{
+	transform: translate(-300%, -50%) rotate(180deg);
 }
 
 .details div > div:last-of-type{
@@ -584,12 +690,23 @@ small{
 	box-shadow: var(--box-shadow);
 	padding: 0.5rem;
 	width: 100%;
+	background-color: var(--color-surface1);
 	border-radius: var(--border-radius);
+
+	display: flex;
+	align-items: center;
+	justify-self: center;
+	gap: 0.5rem;
 }
 
 .details div > div a:last-of-type{
-	background-color: #333333;
-	color: white;
+	background-color: var(--color-surface3);
+	color: var(--color-on-surface3);
+}
+
+.details div > div a svg{
+	color: inherit;
+	width: 1rem;
 }
 
 .details input[type="checkbox"]:checked ~ label,

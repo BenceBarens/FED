@@ -109,10 +109,11 @@
   - fieldset legend W3C erros fixen
 
   Surface plane onderwerpen worden:
+
   - Prefers-reduced-motion ✅
-  - Custom themes (prefers-color-scheme)❌
+  - Custom themes (prefers-color-scheme) ✅
   - Animaties ✅
-  - SVG (icons) stylen en animeren ❌
+  - SVG (icons) stylen en animeren ✅
   - Meer complete micro-interacties ✅
   - Wat omvangrijkere formulieren met styling ✅
   - DOM manipulatie ✅
