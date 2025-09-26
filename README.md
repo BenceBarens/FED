@@ -11,7 +11,7 @@
 
   Je startniveau: **Zwarte piste**
 
-  Je focus: **Surface**
+  Je focus: **Surface en responsive**
  
 </details>
 
@@ -38,7 +38,6 @@
 </details>
 
 
-
 ## Toegankelijkheidstest 1/2 (week 1)
 
 <details>
@@ -49,7 +48,6 @@
 
   Ik zou de website kunnen verbeteren door een "skip to main" link te kunnen maken en door de HTML 'correcter' op de bouwen. Ook zou het zowel makkelijker als beter zijn om alle quiz-pagina's op dezelfde pagina te zetten. Zo is alle content alvast ingeladen, is navigatie minder ingewikkeld en kan ik animaties zonder ingewikkelde javascript laten werken. Verder ga ik alle inputs een unieke vormgeving geven voor meer affordance.
 </details>
-
 
 
 ## Breakdownschets (week 1)
@@ -68,9 +66,6 @@
 </details>
 
 
-
-
-
 ## Voortgang 1 (week 2)
 
 <details>
@@ -87,9 +82,6 @@
   - Toegankelijkheidstest verder aanvullen
 
 </details>
-
-
-
 
 
 ## Voortgang 2 (week 3)
@@ -122,9 +114,6 @@
 </details>
 
 
-
-
-
 ## Toegankelijkheidstest 2/2 (week 4)
 
 <details>
@@ -132,45 +121,11 @@
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
+  - Toegankelijkheid mbt screenreaders is aanzienlijk verbeterd door semantische HTML
+  - Reduced-motion en dark-scheme zijn nu wel aanwezig
+  - Tabindex heeft een betere volgorde én de mogelijkheid om te skippen naar de main content
 
 </details>
-
-
-
-
-
-## Voortgang 3 (week 4)
-
-<details>
-  <summary>uitwerken voor 3<sup>e</sup> voortgang</summary>
-
-  ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
-
-
-  ### Agenda voor meeting
-  samen met je groepje opstellen
-
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
-
-
-  ### Verslag van meeting
-  hier na afloop snel de uitkomsten van de meeting vastleggen
-
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
-
-</details>
-
-
-
-
 
 ## Eindgesprek (week 5)
 
@@ -194,14 +149,11 @@
 </details>
 
 
-
-
-
 ## Bronnenlijst
 
 <details open>
   <summary>continu bijhouden terwijl je werkt</summary>
 
-  Geen hihi
+  Geen bronnen gebruikt
 
 </details>

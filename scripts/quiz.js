@@ -293,3 +293,5 @@ window.addEventListener('beforeunload', () => {
 // window.addEventListener("load", () => {
 //   loadFromLocalStorage();
 // });
+
+deactiveGrid();
