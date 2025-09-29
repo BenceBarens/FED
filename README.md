@@ -135,23 +135,23 @@
 
   ### Je uitkomst - karakteristiek screenshots:
 
-  <img src="readme-images/1.png" width="300px" alt="">
-  <img src="readme-images/2.png" width="300px" alt="">
-  <img src="readme-images/3.png" width="300px" alt="">
+  <img src="readme-images/1.png" height="400px" alt="">
+  <img src="readme-images/2.png" height="400px" alt="">
+  <img src="readme-images/3.png" height="400px" alt="">
 
 
   ### Dit ging goed/Heb ik geleerd:
 
+  <img src="readme-images/7.png" width="300px" alt="">
+  <img src="readme-images/6.png" width="300px" alt="">
   <img src="readme-images/4.png" width="300px" alt="">
   <img src="readme-images/5.png" width="300px" alt="">
-  <img src="readme-images/6.png" width="300px" alt="">
-  <img src="readme-images/7.png" width="300px" alt="">
 
 
   ### Dit was lastig/Is niet gelukt:
 
-  <img src="readme-images/8.jpg" width="300px" alt="">
-  <img src="readme-images/9.jpg" width="300px" alt="">
+  <img src="readme-images/8.png" width="300px" alt="">
+  <img src="readme-images/9.png" width="300px" alt="">
 </details>
 
 
