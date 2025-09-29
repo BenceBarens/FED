@@ -26,13 +26,13 @@
 
   #### Screenshot(s) van de eerste pagina (small screen): 
   Find my | Vitra<br>
-  <img src="readme-images/vitra1.png" width="375px" alt="Home-pagina van Vitra Office Chair Finder; in het midden de tekst 'Welcome to the Office Chair Finder' met een start-knop eronder, er omheen verschillende Vitra-stoelen als achtergrond.">
-  <img src="readme-images/vitra2.png" width="375px" alt="Configuratie-pagina van Vitra Office Chair Finder; verschillende Vitra-stoelen in een circulaire opstelling, groter in het midden en kleiner aan de buitenkant. Aan de onderkant van het scherm kan de lengte van de gebruiker worden geselecteerd.">
+  <img src="readme-images/vitra1.png" width="300px" alt="Home-pagina van Vitra Office Chair Finder; in het midden de tekst 'Welcome to the Office Chair Finder' met een start-knop eronder, er omheen verschillende Vitra-stoelen als achtergrond.">
+  <img src="readme-images/vitra2.png" width="300px" alt="Configuratie-pagina van Vitra Office Chair Finder; verschillende Vitra-stoelen in een circulaire opstelling, groter in het midden en kleiner aan de buitenkant. Aan de onderkant van het scherm kan de lengte van de gebruiker worden geselecteerd.">
 
   #### Screenshot(s) van de tweede pagina (small screen):
   Results | Vitra<br>
-  <img src="readme-images/vitra3.png" width="375px" alt="Resultaten-pagina van Vitra Office Chair Finder; bovenin de pagina de titel 'beste matches' met daaronder een grid van verschillende stoelen.">
-  <img src="readme-images/vitra4.png" width="375px" alt="Detail-pagina van Vitra ID Trim L-stoel; Links groot een foto van de groene bureaustoel, rechts de naam en diverse informatie over de stoel.">
+  <img src="readme-images/vitra3.png" width="300px" alt="Resultaten-pagina van Vitra Office Chair Finder; bovenin de pagina de titel 'beste matches' met daaronder een grid van verschillende stoelen.">
+  <img src="readme-images/vitra4.png" width="300px" alt="Detail-pagina van Vitra ID Trim L-stoel; Links groot een foto van de groene bureaustoel, rechts de naam en diverse informatie over de stoel.">
   
  
 </details>
@@ -86,7 +86,7 @@
 
 ## Voortgang 2 (week 3)
 
-<details open>
+<details>
   <summary>uitwerken voor 2<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
@@ -109,6 +109,7 @@
   - Meer complete micro-interacties ✅
   - Wat omvangrijkere formulieren met styling ✅
   - DOM manipulatie ✅
+  - has() ✅
   - BlingBling ✅
 
 </details>
@@ -129,29 +130,34 @@
 
 ## Eindgesprek (week 5)
 
-<details>
+<details open>
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
+
+  <img src="readme-images/1.png" width="300px" alt="">
+  <img src="readme-images/2.png" width="300px" alt="">
+  <img src="readme-images/3.png" width="300px" alt="">
 
 
-  ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatjes
+  ### Dit ging goed/Heb ik geleerd:
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+  <img src="readme-images/4.png" width="300px" alt="">
+  <img src="readme-images/5.png" width="300px" alt="">
+  <img src="readme-images/6.png" width="300px" alt="">
+  <img src="readme-images/7.png" width="300px" alt="">
 
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatjes
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+  <img src="readme-images/8.jpg" width="300px" alt="">
+  <img src="readme-images/9.jpg" width="300px" alt="">
 </details>
 
 
 ## Bronnenlijst
 
-<details open>
+<details>
   <summary>continu bijhouden terwijl je werkt</summary>
 
   Geen bronnen gebruikt

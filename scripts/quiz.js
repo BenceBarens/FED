@@ -290,8 +290,68 @@ window.addEventListener('beforeunload', () => {
     saveToLocalStorage();
 });
 
-// window.addEventListener("load", () => {
-//   loadFromLocalStorage();
-// });
+//Vorige voorkeuren inladen
+window.addEventListener("load", () => {
 
-deactiveGrid();
+    loadFromLocalStorage();
+    if (localStorage.getItem("userPrefrences")) {
+
+        if (userPrefrences.sittingTime) {
+            const input = document.querySelector(
+                `input[name="sittingTime"][value="${userPrefrences.sittingTime}"]`
+            );
+            if (input) input.checked = true;
+        }
+
+        if (userPrefrences.sharing) {
+            const input = document.querySelector(
+                `input[name="sharing"][value="${userPrefrences.sharing}"]`
+            );
+            if (input) input.checked = true;
+        }
+
+        if (userPrefrences.height) {
+            const range = document.querySelector('input[name="height"]');
+            range.value = userPrefrences.height;
+        }
+
+        if (userPrefrences.position1 !== null) {
+            const cb = document.querySelector('input[name="position1"]');
+            if (cb) cb.checked = userPrefrences.position1;
+        }
+        if (userPrefrences.position2 !== null) {
+            const cb = document.querySelector('input[name="position2"]');
+            if (cb) cb.checked = userPrefrences.position2;
+        }
+        if (userPrefrences.position3 !== null) {
+            const cb = document.querySelector('input[name="position3"]');
+            if (cb) cb.checked = userPrefrences.position3;
+        }
+        if (userPrefrences.position4 !== null) {
+            const cb = document.querySelector('input[name="position4"]');
+            if (cb) cb.checked = userPrefrences.position4;
+        }
+
+        if (userPrefrences.breathable) {
+            const input = document.querySelector(
+                `input[name="breathability"][value="${userPrefrences.breathable}"]`
+            );
+            if (input) input.checked = true;
+        }
+
+        if (userPrefrences.padding) {
+            const range = document.querySelector('input[name="padding"]');
+            range.value = userPrefrences.padding;
+        }
+
+        if (userPrefrences.armrests) {
+            const input = document.querySelector(
+                `input[name="armrests"][value="${userPrefrences.armrests}"]`
+            );
+            if (input) input.checked = true;
+        }
+
+        moveChairsToCurrentPosition();
+    }
+
+});

@@ -113,6 +113,14 @@ body, main{
 /* GENERAL */
 /***********/
 
+*:focus-visible,
+a:focus-visible > article{
+	outline: 0.2rem dotted var(--color-accent) !important;
+	outline-offset: 0.2rem;
+	border-radius: var(--border-radius);
+	overflow: visible !important;
+}
+
 header{
 	padding: 1rem;
 	display: grid;
@@ -253,6 +261,14 @@ button, input, label, summary{
 
 .start div img{
 	width: 6rem;
+}
+
+.start div a{
+	transition: all 200ms ease;
+}
+
+.start div a:hover{
+	transform: scale(1.05) translateY(-5%);
 }
 
 .start div a:first-of-type{
@@ -396,16 +412,68 @@ button, input, label, summary{
 }
 
 .filters label{
+	display: flex;
+	align-items: center;
+	justify-self: center;
+}
+
+.filters label:has(input[type="checkbox"]),
+.filters label:has(input[type="radio"]){
 	margin: 0.2rem;
 	padding: 0.5rem;
 	border: 0.1rem var(--color-shadow) solid;
 	border-radius: var(--border-radius);
 	box-shadow: var(--box-shadow);
 
-	display: flex;
 	gap: 0.5rem;
-	align-items: center;
-	justify-content: center;
+}
+
+.filters label:has(input[type="range"]){
+	width: 90%;
+}
+
+.filters input[type="range"]{
+	-webkit-appearance: none; /* Chrome, Safari, Edge */
+	-moz-appearance: none;    /* Firefox */
+	appearance: none; 
+	width: 70%;
+	height: 1rem;
+
+	border-radius: 50rem;
+	box-shadow: inset var(--box-shadow);
+	margin: auto;
+}
+.filters fieldset:nth-child(3) input[type="range"]{
+	background: repeating-linear-gradient(
+		to right,
+		var(--color-surface2) 0 0.2rem,
+		var(--color-surface1) 0.2rem calc(100% / 5)
+	);
+	background-position: 0.75rem 0;
+  	background-size: calc(100% - 1.5rem) 100%;
+}
+
+.filters fieldset:nth-child(6) input[type="range"]{
+	background: repeating-linear-gradient(
+		to right,
+		var(--color-surface2) 0 0.2rem,
+		var(--color-surface1) 0.2rem calc(100% / 3)
+	);
+	background-position: 0.75rem 0;
+  	background-size: calc(100% - 1.5rem) 100%;
+}
+
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: var(--color-accent);
+  box-shadow: var(--box-shadow);
+  border-radius: 50%;
+  cursor: grab;
+  margin-top: -0.25rem;
 }
 
 fieldset{
